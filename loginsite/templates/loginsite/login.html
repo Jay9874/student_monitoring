@@ -1,0 +1,38 @@
+{% extends "loginsite/layout.html" %}
+
+{% block body %}
+
+<div class="notes">
+    <span>
+        <h3>Login To Your Account</h3>
+    </span>
+</div>
+{% if message %}
+<div class="alert_message">
+    {{ message }}
+</div>
+{% endif %}
+
+
+
+<form class="credentials_menu" action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+
+    <input class="credentials credentials_username" type="text" name="username" minlength="4" maxlength="12"
+        placeholder="Student ID">
+    <input class="credentials credentials_password" type="password" name="password" maxlength="12"
+        placeholder="Password">
+    <input class="credentials credentials_login" type="submit" value="Login">
+
+</form>
+
+<div class="forgot">
+
+    <a href="{% url 'forgot' %}">Forgot Password/User ID</a>
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e8aac5ac55.js" crossorigin="anonymous"></script>
+    <title>Academics</title>
+    <link rel="stylesheet" href="{% static 'studentsite/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <div class="school_logo">
+            <img src="{% static 'loginsite/IIT.svg' %}" alt="school_logo" id="school_logo">
+            <span>
+                <h3>
+                    IIT Madras
+                </h3>
+            <!-- {%for student in student_list %}
+            <h2>Hello, {{ student.first_name }}</h2>
+            {% endfor %} -->
+        </div>
+
+
+        <!-- <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-user" id="logout-btn"></div> -->
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search anything...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <!-- header ends here -->
+    </header>
+
+
+    <!-- <div class="Logo_content"></div>
+                <div class="logo"></div>
+                <i class='bx bxs-building'></i>
+                <div class="logo_name">School Logo</div>
+                 -->
+    <div class="sidebar">
+        <div class="nav_list">
+            <ul class="sidebar_list-menu">
+
+                <li class="sidebar_list-items list_item-home">
+                    <button class="sidebar_button">
+                        <i class="fa-light fa-house-user"></i>
+                        <a href="{% url 'studentsite:student_home' %}">
+                            <span class="link">Home</span>
+                        </a>
+                    </button>
+                </li>
+
+                <li class="sidebar_list-items list_item-scores">
+                    <button class="sidebar_button">
+                        <a href="{% url 'studentsite:scores' %}">
+                            <i class='bx bx-book-open'></i>
+                            <span class="link">Scores</span>
+                        </a>
+                    </button>
+                </li>
+
+                <li class="sidebar_list-items list_item-analytics">
+                    <button class="sidebar_button">
+                        <a href="{% url 'studentsite:analytics' %}">
+                            <i class='bx bxs-bar-chart-alt-2'></i>
+                            <span class="link">Analytics</span>
+                        </a>
+                    </button>
+                </li>
+
+                <li class="sidebar_list-items list_item-curriculum">
+                    <button class="sidebar_button">
+                        <a href="#">
+                            <i class='bx bx-run'></i>
+                            <span class="link">Co-curriculum</span>
+                        </a>
+                    </button>
+                </li>
+                <li class="sidebar_list-items list_item-achievement">
+                    <button class="sidebar_button">
+                        <a href="#">
+                            <i class='bx bx-medal'></i>
+                            <span class="link">Achievement</span>
+                        </a>
+                    </button>
+                </li>
+                <li class="sidebar_list-items list_item-remarks">
+                    <button class="sidebar_button">
+                        <a href="#">
+                            <i class='bx bx-notepad'></i>
+                            <span class="link">Remarks</span>
+                        </a>
+                    </button>
+                </li>
+                <li class="sidebar_list-items list_item-setting">
+                    <button class="sidebar_button">
+                        <a href="#">
+                            <i class='bx bxs-cog'></i>
+                            <span class="link">setting</span>
+                        </a>
+                    </button>
+                </li>
+                <li class="sidebar_list-items list_item-logout">
+                    <button class="sidebar_button">
+                        <a href="{% url 'logout' %}">
+                            <i class='bx bx-log-out'></i>
+                            <span class="link">Logout</span>
+                        </a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block container%}
+        {% endblock %}
+    </div>
+    <!-- 
+    <div class="container_marks">
+        {% block scores %}
+        {% endblock %}
+    </div>
+
+    <div class="analytics">
+        {% block analytics %}
+        {% endblock %}
+    </div> -->
+
+    <!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>

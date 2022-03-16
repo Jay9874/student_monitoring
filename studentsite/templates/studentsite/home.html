@@ -1,0 +1,38 @@
+{% extends "studentsite/layout.html" %}
+
+
+{% block container %}
+<div class="container_items home_info">
+    <div class="container_head">
+        <div class="main_container">
+
+            {% for student in student_list %}
+            <div class="home_info_static">
+                <div class="profile_pic">
+                    <img src="{{ student.profile_pic.url }}" height="100px" width="100px" style="border-radius: 75px;"
+                        alt="img">
+                </div>
+
+                <h1 class="user_greeting">Welcome, {{ student }}</h1>
+            </div>
+
+            <section class="section_info">
+                <div class="home_info_relative">
+                    <h3>First Name: {{ student.first_name }}</h3>
+                    <h3>Last Name: {{ student.last_name }}</h3>
+                    <h3>Gender: {{ student.gender }}</h3>
+                    <h3>Father's Name: {{ student.father_name }}</h3>
+                    <h3>Standard: {{ student.standard }}</h3>
+                    <h3>University/School Rollno.: {{ student.roll_number }}</h3>
+                    <h3>Mobile: {{ student.telephone }}</h3>
+                    <h3>Email: {{ student.email }}</h3>
+                    <h3>Address: {{ student.residence }}</h3>
+                    <h3>Website: {{ student.url }}</h3>
+                </div>
+            </section>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

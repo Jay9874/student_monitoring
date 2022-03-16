@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- <script src="logic.js"></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="IIT (1).ico" type="image/x-icon">
+    <title>Sign in - Student accounts</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'loginsite/style.css' %}">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/e8aac5ac55.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="leftmenu">
+                <li class="list-item" id="brand">
+                    <img src="{% static 'loginsite/IIT.svg' %}" alt="school_logo" id="school_logo">
+                    <span>
+                        <h3>
+                            IIT Madras
+                        </h3>
+                    </span>
+                </li>
+                <!-- <li class="list-item">label</li>
+            <li class="list-item">name</li> -->
+            </ul>
+            <ul class="rightmenu">
+                <!-- <li class="list-iten" id="start">search</li> -->
+                <li class="list-item">
+                    <a href="help.com" class="header-menu_button">
+                        <span class="header-menu_button-label">
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <!-- <li class="list-item">
+                    <a href="home.com" class="header-menu_button">
+                        <span class="header-menu_button-label">
+                            Help
+                        </span>
+                    </a>
+                </li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" role="main">
+        <div class="container_login">
+            {% block body %}
+
+
+            {% endblock %}
+
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer_about grid_items" footer_nav>
+            <h3 class="footer-heading-about">About</h3>
+            <div class="footer-about-content">
+                <p>We are IITians of the batch 2019 CS, <br>
+                    we have made this website for the usage of keeping the records. <br>
+                    I hope you would like it. <br>
+                    <a href="" class="more_about" id="read_more">
+                        Read more..
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer_address grid_items" footer_nav>
+            <h3 class="footer-heading-address">Adress</h3>
+            <div class="footer_address_content">
+                <p>
+                    <a
+                        href="https://www.google.com/maps/place/246,+Banku+Bihari+Chatterjee+Rd,+Bosepukur,+Kasba,+Kolkata,+West+Bengal+700042/@22.5173211,88.3697499,15z/data=!3m1!4b1!4m5!3m4!1s0x3a0276cb46f167f3:0x58fcdb670938cfa9!8m2!3d22.5173213!4d88.3785047">
+                        246, B.B.Chatterjee Road, Kasba
+                        <br>
+                        Kolkata-700042, WB
+                        <br>
+                        India
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer_contact grid_items" footer_nav>
+            <h3 class="footer_heading">
+                Contact
+            </h3>
+            <div class="footer_contact-content">
+                <a href="mailto:jayprakashsharma225@gmail.com" target="_blank" rel="noopener noreferrer"
+                    class="footer_contact-email">Email us</a>
+                <a href="tel:+919330113253" class="footer_contact-phone">+91 9330113253 </a>
+
+            </div>
+        </div>
+        <ul class="footer_media grid_items" footer_nav>
+            <li class="footer_media-item">
+                <a href="https://www.linkedin.com/in/jay-prakash-s-797347140/" target="_blank"
+                    class="footer_media-item-link">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="footer_media-item">
+                <a href="https://www.instagram.com/jayprakashsharma225/" target="_blank" class="footer_media-item-link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li class="footer_media-item">
+                <a href="https://twitter.com/JayPrak01237921?t=QNyK0m1GdBTrQQkUjcStiQ&s=09" target="_blank"
+                    class="footer_media-item-link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li class="footer_media-item">
+                <a href="https://github.com/Jay9874" target="_blank" class="footer_media-item-link">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+        </ul>
+
+        <div class="footer_copyright grid_items" footer_nav>
+            <p class="footer_copyright-disclaimer">
+                © Copyright JF - Jay Prakash Sharma | 2022
+            </p>
+        </div>
+        <!-- I made a change here added a class grid item to centre the 
+        text aling and justify content -->
+        <div class="footer_meta grid_items" footer_nav>
+            <a href="terms.com" class="footer_meta-link">
+                Terms & conditions
+            </a>
+            <a href="privacy.com" class="footer_meta-link">
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
