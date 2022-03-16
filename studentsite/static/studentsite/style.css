@@ -23,9 +23,26 @@ html{
 }
 
 a{
+    display: block;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    overflow: hidden;
     text-decoration: none;
-    color: rgb(0, 0, 0);
     font-weight: bolder;
+    color: rgba(0, 0, 0, 0.678);
+}
+
+.sidebar_list-items a:hover{
+    background-color:rgba(64, 156, 209, 0.274);
 }
 
 th{
@@ -120,6 +137,7 @@ header{
     background-color:rgba(64, 156, 209, 0.274);
     height: 40px;
     width: 30vw;
+    border: none;
     border-radius: 10px;
     border-color: rgba(107, 103, 103, 0.521);
     outline: none;
@@ -153,21 +171,6 @@ header{
     color: var(--blue);
 } 
  
-/* .Logo_content .logo{
-    color:#130f40;
-    display: flex;
-    height: 50px;
-    width: 50px;
-    align-items: center;
-}
-.Logo_content .logo i{
-    font-size: 28px;
-    margin-right: 5px;
-}
-.Logo_content .logo .logo_name{
-    font-size: 20px;
-    font-weight: 400;
-} */
 
 .sidebar{
 
@@ -213,7 +216,7 @@ header{
     background-color: red;
 } */
 
-.sidebar_button{
+/* .sidebar_button{
     padding-left: 20px;
     height: 100%;
     width: 100%;
@@ -225,11 +228,9 @@ header{
     cursor: pointer;
     background-color: transparent;
     overflow: hidden;
-}
+} */
 
-.sidebar_list-items button:hover{
-    background-color:rgba(64, 156, 209, 0.274);
-}
+
 
 .link{
     margin-left: 20px;
@@ -285,7 +286,7 @@ header{
     position: relative;
     top: 80px;
     height: 100vh;
-    margin-left: 250px;
+    margin-left: 275px;
     display: block;
     flex-direction: column;
     flex-wrap: wrap;
@@ -307,7 +308,7 @@ header{
 } */
 
 .main_container{
-    max-width: 840px;
+    max-width: 750px;
     display: block
     ;
 }
@@ -324,7 +325,7 @@ header{
 
 }
 
-.home_info_relative{
+.basic_info{
     position: relative;
     display: flex;
     flex-direction: column;

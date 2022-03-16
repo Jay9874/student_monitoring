@@ -17,13 +17,31 @@
             </div>
 
             <section class="section_info">
-                <div class="home_info_relative">
-                    <h3>First Name: {{ student.first_name }}</h3>
-                    <h3>Last Name: {{ student.last_name }}</h3>
-                    <h3>Gender: {{ student.gender }}</h3>
-                    <h3>Father's Name: {{ student.father_name }}</h3>
-                    <h3>Standard: {{ student.standard }}</h3>
-                    <h3>University/School Rollno.: {{ student.roll_number }}</h3>
+                <div class="basic_info">
+                    <div class="basic_info1">
+                        <div class="basic_info2">
+                            <div class="header_info">
+                               <div class="header_info1">
+                                   <header>
+                                       <div class="inside_header">
+                                           <h1>Basic info</h1>
+                                       </div>
+                                   </header>
+                               </div> 
+                            </div>
+
+                            <div class="basic_info_name">
+                                
+                            </div>
+                            <h3>Name: {{ student.first_name }} {{ student.last_name }}</h3>
+                            <h3>Gender: {{ student.gender }}</h3>
+                            <h3>Father's Name: {{ student.father_name }}</h3>
+                            <h3>Standard: {{ student.standard }}</h3>
+                            <h3>University/School Rollno.: {{ student.roll_number }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_info">
                     <h3>Mobile: {{ student.telephone }}</h3>
                     <h3>Email: {{ student.email }}</h3>
                     <h3>Address: {{ student.residence }}</h3>
