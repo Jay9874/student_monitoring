@@ -17,36 +17,408 @@
             </div>
 
             <section class="section_info">
-                <div class="basic_info">
-                    <div class="basic_info1">
-                        <div class="basic_info2">
-                            <div class="header_info">
-                               <div class="header_info1">
-                                   <header>
-                                       <div class="inside_header">
-                                           <h1>Basic info</h1>
-                                       </div>
-                                   </header>
-                               </div> 
-                            </div>
 
-                            <div class="basic_info_name">
-                                
+
+
+
+                <!-- basic_info container of the home screen starts here -->
+                <div class="info_container">
+
+                    <div class="margin_in_info">
+                        <div class="container_for_details">
+
+                            <!-- basic_info heading starts here -->
+                            <div class="info_heading">
+                                <div class="heading_padding">
+                                    <div class="container_for_header">
+                                        <div class="header_of_info">
+                                            <h2 class="info_h2">Basic info</h2>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3>Name: {{ student.first_name }} {{ student.last_name }}</h3>
-                            <h3>Gender: {{ student.gender }}</h3>
-                            <h3>Father's Name: {{ student.father_name }}</h3>
-                            <h3>Standard: {{ student.standard }}</h3>
-                            <h3>University/School Rollno.: {{ student.roll_number }}</h3>
+                            <!-- basic info heading ends here -->
+
+                            <!-- basic info name section starts here -->
+                            <div class="basic_info_name">
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Name</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.first_name}} {{ student.last_name }}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info name section ends here -->
+
+                            <!-- basic info gender starts here -->
+                            <div class="basic_info_gender">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Gender</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.gender }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info gender ends here -->
+
+                            <!-- basic info birthday starts here -->
+                            <div class="basic_info_birthday">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Birthday</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.birthday }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info birthday ends here -->
+
+                            <!-- basic info father's name start here -->
+                            <div class="basic_info_father_name">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Father's name</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.father_name }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info father's name ends here -->
+
+                            <!-- basic info standard starts here -->
+                            <div class="basic_info_standard">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Standard</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.standard }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info standard ends here -->
+
+                            <!-- basic info rollno starts here -->
+                            <div class="basic_info_rollno">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Roll no.</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.roll_number }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info rollno ends here -->
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- basic_info ends here -->
+
+
+
+                <!-- contact info starts here -->
+                <div class="info_container">
+
+                    <div class="margin_in_info">
+                        <div class="container_for_details">
+
+
+                            <!-- basic_info heading starts here -->
+                            <div class="info_heading">
+                                <div class="heading_padding">
+                                    <div class="container_for_header">
+                                        <div class="header_of_info">
+                                            <h2 class="info_h2">Contact info</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- basic info heading ends here -->
+
+                            <!-- contact info address starts here -->
+                            <div class="contact_info_address">
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Address</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.residence }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contact info address ends here  -->
+
+                            <!-- contact info email starts here -->
+                            <div class="contact_info_email">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Email</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.email }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contact info email ends here -->
+
+                            <!-- contact info mobile starts here -->
+                            <div class="contact_info_mobile">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Phone</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.telephone }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contact info mobile ends here -->
+
+                            <!-- contact info website starts here -->
+                            <div class="contact_info_website">
+                                <div class="underline_bar">
+                                    <div class="straight_line"></div>
+                                </div>
+                                <div class="for_padding_arround">
+                                    <div class="main_container">
+                                        <div class="div_for_unknown_reason">
+                                            <div class="for_justify">
+                                                <div class="a_line">
+                                                    <div class="seperator_div">
+
+                                                        <!-- attaribute and value start here -->
+                                                        <div class="for_attribute">
+                                                            <div class="finally">
+                                                                <h3 class="info_h3">Website</h3>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="for_value">
+                                                            <div class="finally_value">
+                                                                <div>{{ student.url }}</div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- attribute and value ends here -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- contact info website ends here -->
+
                         </div>
                     </div>
                 </div>
-                <div class="contact_info">
-                    <h3>Mobile: {{ student.telephone }}</h3>
-                    <h3>Email: {{ student.email }}</h3>
-                    <h3>Address: {{ student.residence }}</h3>
-                    <h3>Website: {{ student.url }}</h3>
-                </div>
+                <!-- contact info ends here -->
+
+
             </section>
             {% endfor %}
         </div>
