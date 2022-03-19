@@ -36,7 +36,7 @@ class Student(models.Model):
     residence = models.TextField(default=0, null=False)
     url = models.URLField(max_length=200, null=True, blank=True)
     profile_pic = models.ImageField(upload_to='', default="")
-    birthday = models.DateField(blank=False, default=timezone, null=True)
+    birthday = models.DateField(blank=False, null=True)
 
 
     objects = models.Manager()

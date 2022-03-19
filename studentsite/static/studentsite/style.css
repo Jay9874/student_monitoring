@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 @import url('http://fonts.cdnfonts.com/css/product-sans');
+@import url('http://fonts.cdnfonts.com/css/product-sans?styles=15767');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,300&display=swap'); */
 /* :root{
     --blue:#6495ed;
@@ -20,7 +21,7 @@ html{
 *{
     font-family: 'Product Sans', sans-serif;
                                                 
-    
+    -webkit-tap-highlight-color: transparent;
     font-style: normal;
     font-weight: 400; 
 
@@ -29,7 +30,7 @@ html{
 }
 
 a{
-    display: block;
+    display: flex;
     padding-left: 20px;
     height: 100%;
     width: 100%;
@@ -82,8 +83,13 @@ header{
     backdrop-filter: blur(4px);
     width: 100%;
     position: fixed;
-    top: 0px;
-    height: 75px;
+    left: 0;
+    right: 0;
+    z-index: 986;
+    /* top: 0px; */
+    box-sizing: border-box;
+    min-width: min-content;
+    height: 80px;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -99,7 +105,7 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     margin-left: 0;
-    height: 50px;
+    height: 60px;
     font-size: small;
     align-items: center;
 }
@@ -109,18 +115,29 @@ header{
     display: flex;
 }
 
+.school_logo h3{
+    font-size: 1.5em;
+}
+
 #school_logo{
-    height: 30px;
+    height: 40px;
 }
 
 .greet h2{
     padding: 0;
 }
 
-.user_greeting{
+.user_greeting {
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 2.25rem;
+    hyphens: auto;
     text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #202124;
 }
-
 
 /* ul li header .heading{
     font-size: 2rem;
@@ -184,6 +201,11 @@ header{
 } 
  
 
+
+/* header css ends here */
+
+
+/* sidebar css starts here */
 .sidebar{
 
     top: 80px;
@@ -221,6 +243,7 @@ header{
     line-height: 38px;
     height: 46px;
     padding: 0px 0px;
+    align-items: center;
     /* background-color: rgba(255, 255, 255, 0.555); */
 }
 
