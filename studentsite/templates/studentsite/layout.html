@@ -4,6 +4,16 @@
 <html lang="en">
 
 <head>
+
+
+
+    <!-- new -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- new end -->
+
+    <link href="http://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -20,12 +30,17 @@
 <body>
     <header>
         <div class="school_logo">
-            <img src="{% static 'loginsite/IIT.svg' %}" alt="school_logo" id="school_logo">
-            <span>
-                <h3>
-                    IIT Madras
-                </h3>
-                <!-- {%for student in student_list %}
+            <div>
+                <img src="{% static 'loginsite/IIT.svg' %}" alt="school_logo" id="school_logo">
+            </div>
+            <div>
+                <span>
+                    <h3>
+                        IIT Madras
+                    </h3>
+                </span>
+            </div>
+            <!-- {%for student in student_list %}
             <h2>Hello, {{ student.first_name }}</h2>
             {% endfor %} -->
         </div>
@@ -34,11 +49,13 @@
         <!-- <div class="icons">
                 <div class="fas fa-search" id="search-btn"></div>
                 <div class="fas fa-user" id="logout-btn"></div> -->
-
-        <form action="" class="search-form">
-            <input type="search" id="search-box" placeholder="search anything...">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
+        <div class="search_container">
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="search anything...">
+                <i class="material-icons" for="search-box">search</i>
+                <label for="search-box"></label>
+            </form>
+        </div>
         <!-- header ends here -->
     </header>
 
@@ -56,7 +73,9 @@
 
 
                     <a class="sidebar_link" href="{% url 'studentsite:student_home' %}">
-                        <ion-icon name="home-outline"></ion-icon>
+
+                        <!-- <i class="fa-light fa-house-user"></i> -->
+                        <i class="material-icons">account_circle</i>
                         <span class="link">Home</span>
                     </a>
 
@@ -65,7 +84,8 @@
                 <li class="sidebar_list-items list_item-scores">
 
                     <a class="sidebar_link" href="{% url 'studentsite:scores' %}">
-                        <i class='bx bx-book-open'></i>
+                        <i class="material-icons">table_chart</i>
+                        <!-- <i class='bx bx-book-open'></i> -->
                         <span class="link">Scores</span>
                     </a>
 
@@ -74,7 +94,8 @@
                 <li class="sidebar_list-items list_item-analytics">
 
                     <a class="sidebar_link" href="{% url 'studentsite:analytics' %}">
-                        <i class='bx bxs-bar-chart-alt-2'></i>
+                        <i class="material-icons">analytics</i>
+                        <!-- <i class='bx bxs-bar-chart-alt-2'></i> -->
                         <span class="link">Analytics</span>
                     </a>
 
@@ -83,7 +104,8 @@
                 <li class="sidebar_list-items list_item-curriculum">
 
                     <a class="sidebar_link" href="#">
-                        <i class='bx bx-run'></i>
+                        <i class="material-icons">sports</i>
+                        <!-- <i class='bx bx-run'></i> -->
                         <span class="link">Co-curriculum</span>
                     </a>
 
@@ -91,7 +113,8 @@
                 <li class="sidebar_list-items list_item-achievement">
 
                     <a class="sidebar_link" href="#">
-                        <i class='bx bx-medal'></i>
+                        <i class="material-icons">workspace_premium</i>
+                        <!-- <i class='bx bx-medal'></i> -->
                         <span class="link">Achievement</span>
                     </a>
 
@@ -99,7 +122,8 @@
                 <li class="sidebar_list-items list_item-remarks">
 
                     <a class="sidebar_link" href="#">
-                        <i class='bx bx-notepad'></i>
+                        <i class="material-icons">gpp_good</i>
+                        <!-- <i class='bx bx-notepad'></i> -->
                         <span class="link">Remarks</span>
                     </a>
 
@@ -107,15 +131,17 @@
                 <li class="sidebar_list-items list_item-setting">
 
                     <a class="sidebar_link" href="#">
-                        <i class='bx bxs-cog'></i>
-                        <span class="link">setting</span>
+                        <i class="material-icons">settings</i>
+                        <!-- <i class='bx bxs-cog'></i> -->
+                        <span class="link">Setting</span>
                     </a>
 
                 </li>
                 <li class="sidebar_list-items list_item-logout">
 
                     <a class="sidebar_link" href="{% url 'logout' %}">
-                        <i class='bx bx-log-out'></i>
+                        <i class="material-icons">logout</i>
+                        <!-- <i class='bx bx-log-out'></i> -->
                         <span class="link">Logout</span>
                     </a>
 
@@ -141,14 +167,33 @@
 
     <!-- <script src="js/script.js"></script> -->
 
-    <script>
+
+
+
+    <!-- new script -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <!-- new script ends -->
+
+
+
+
+    <!-- <script>
         $("a.link").click(function () {
             $("a.sidebar_link").css("background-color", "black");
             $(this).css("background-color", "red");
         });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </script> -->
 </body>
 
 </html>

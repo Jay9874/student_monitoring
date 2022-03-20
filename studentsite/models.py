@@ -1,11 +1,16 @@
+from cProfile import label
 import email
+from django.conf import settings
 from random import choices
 from email.policy import default
 from sre_constants import CATEGORY
+from django import forms
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.db import models
+
 from django.contrib.auth.models import User
+from pytz import timezone
 
 
 class Student(models.Model):
@@ -31,6 +36,7 @@ class Student(models.Model):
     residence = models.TextField(default=0, null=False)
     url = models.URLField(max_length=200, null=True, blank=True)
     profile_pic = models.ImageField(upload_to='', default="")
+    birthday = models.DateField(blank=False, null=True)
 
 
     objects = models.Manager()
