@@ -617,3 +617,9 @@ td, th {
 
 /* css for the informations container in home tan ends here */
 
+
+.exp_tables{
+    height: 400px;
+    width: 100%;
+    /* background-color: black ; */
+}
