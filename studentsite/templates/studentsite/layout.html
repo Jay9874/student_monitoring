@@ -1,5 +1,8 @@
 {% load static %}
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,7 +104,7 @@
 
                 <li class="sidebar_list-items list_item-curriculum">
 
-                    <a class="sidebar_link" href="#">
+                    <a class="sidebar_link" href="{% url 'studentsite:cocurriculum' %}">
                         <i class="material-icons">sports</i>
                         <!-- <i class='bx bx-run'></i> -->
                         <span class="link">Co-curriculum</span>
@@ -110,7 +113,7 @@
                 </li>
                 <li class="sidebar_list-items list_item-achievement">
 
-                    <a class="sidebar_link" href="#">
+                    <a class="sidebar_link" href="{% url 'studentsite:achievement' %}">
                         <i class="material-icons">workspace_premium</i>
                         <!-- <i class='bx bx-medal'></i> -->
                         <span class="link">Achievement</span>
@@ -119,7 +122,7 @@
                 </li>
                 <li class="sidebar_list-items list_item-remarks">
 
-                    <a class="sidebar_link" href="#">
+                    <a class="sidebar_link" href="{% url 'studentsite:remark' %}">
                         <i class="material-icons">gpp_good</i>
                         <!-- <i class='bx bx-notepad'></i> -->
                         <span class="link">Remarks</span>

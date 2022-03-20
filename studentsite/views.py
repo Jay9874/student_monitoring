@@ -7,8 +7,7 @@ from django.core.files.storage import FileSystemStorage
 from matplotlib.style import context
 from pandas import read_sql_query
 from sklearn import model_selection
-from .models import Subject, Student, Score 
-from .models import Student, Score
+from .models import Subject, Student, Score, Cocurriculum, Achievement, Remark
 
 
 
@@ -59,4 +58,42 @@ def analytics(request):
     return render(request, "studentsite/analytics.html", context)
 
 
+def cocurriculum(request):
+    student = Student.objects.filter(student=request.user.id)
 
+    context = {
+        "student_list": student
+    
+    }
+
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("login"))
+
+    return render(request, "studentsite/cocurriculum.html", context)
+
+
+def achievement(request):
+    student = Student.objects.filter(student=request.user.id)
+
+    context = {
+        "student_list": student
+    
+    }
+
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("login"))
+
+    return render(request, "studentsite/achievement.html", context)
+
+def remark(request):
+    student = Student.objects.filter(student=request.user.id)
+
+    context = {
+        "student_list": student
+    
+    }
+
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("login"))
+
+    return render(request, "studentsite/remark.html", context)
