@@ -56,8 +56,9 @@ th{
     font-size: larger;
 }
 h1, h2, h3, h4{
-    padding: 5px;
+    padding: 9px;
     font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serifpyth;
 }
 
 
@@ -215,7 +216,7 @@ header{
     width: 240px;
     left: 0;
     overflow-y: auto;
-    /* background-color: #D3D3D3; */
+    /* background-color:
     padding: 5px 0;
 
 }
