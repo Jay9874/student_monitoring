@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # added apps
     'loginsite', 
-    'studentsite'
+    'studentsite',
+    'active_link',
 ]
 
 MIDDLEWARE = [

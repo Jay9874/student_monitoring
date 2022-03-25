@@ -4,15 +4,6 @@
 @import url('http://fonts.cdnfonts.com/css/product-sans');
 @import url('http://fonts.cdnfonts.com/css/product-sans?styles=15767');
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,300&display=swap'); */
-/* :root{
-    --blue:#6495ed;
-    --black:#130f40;
-    --light-color:#666;
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    --border:2rem solid rgba(0,0,0,.1);
-    --outline:1rem solid rgba(0,0,0,.1);
-    --outline-hover:.2rem solid var(--black);
-} */
 
 html{
     overflow-x: hidden;
@@ -48,8 +39,8 @@ a{
     color: rgba(0, 0, 0, 0.678);
 }
 
-.sidebar_list-items a:hover{
-    background-color:rgba(156, 159, 160, 0.363);
+.sidebar_link:hover:not(.active){
+    background-color:rgba(174, 176, 177, 0.212);
 }
 
 
@@ -71,14 +62,12 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     display: block;
+    letter-spacing: .01428571em;
+    font-optical-sizing: none;
+    text-size-adjust: 100%;
     /* background-color:white; */
 }
 
-.chartBox{
-    width: 400px;
-
-
-}
 
 header{
     /* background-color: rgba(206, 144, 29, 0.363); */
@@ -91,119 +80,210 @@ header{
     /* top: 0px; */
     box-sizing: border-box;
     min-width: min-content;
-    height: 80px;
-    z-index: 1;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
+    min-width: 320px;
+    transition: box-shadow 250ms;
     /* overflow: hidden; */
 
     box-shadow: var(--box-shadow);
 }
 
+.header_container{
+    padding: 8px 15px;
+    transition: background-color .4s;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: min-content;
+
+}
+
 .school_logo{
+    padding-right: 30px;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-box-align: center;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 0;
-    height: 60px;
-    font-size: small;
+    height: 48px;
     align-items: center;
+
 }
 
-#brand{
+.school_logo_container{
+    -webkit-box-align: center;
     align-items: center;
     display: flex;
+    position: relative;
+    top: 2px;
+
+
 }
 
-.school_logo h3{
-    font-size: 1.5em;
-}
+
 
 #school_logo{
     height: 40px;
 }
-
-.greet h2{
-    padding: 0;
+#school_name h3{
+    margin: 0;
 }
 
-.user_greeting {
-    font-size: 1.75rem;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 2.25rem;
-    hyphens: auto;
-    text-align: center;
-    word-wrap: break-word;
-    word-break: break-word;
-    color: #202124;
-}
 
-/* ul li header .heading{
-    font-size: 2rem;
-    font-weight: bolder;
-    color:var(--black);
-    background-color: red;
-} */
+/* search container css start here */
 
-
-.search-form{
-    display: flex;
+.search_container{
+    justify-content: flex-start;
+    flex: 1 1 100%;
+    height: 48px;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-box-align: center;
     align-items: center;
-    box-shadow: var(--box-shadow);
-    background-color: transparent;
-}
-
-/* .search_container{
-    
     display: flex;
-    width: 20vw;
-} */
+}
 
-#search-box{
-    padding: 0 8px;
-    margin: 0 8px;
-    background-color:rgba(183, 186, 187, 0.336);
-    height: 40px;
-    width: 20vw;
-    border: none;
-    border-radius: 10px;
-    /* border-color: rgba(107, 103, 103, 0.521); */
-    outline: none;
+.search_container_head{
+    padding-right: 30px;
+    max-width: 100%;
+    padding-left: 10px;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 48px;
     
 }
 
-  
-/* .search-form input{
-    height:100%;
-    width:100%;
-    background: none;
-    text-transform: none;
-    font-size: 1.6rem;
-    color:var(--black);
-    padding:0 1.5rem;
-}  */
-.search-form.active{
-   right:2rem;
-   transition: .4s linear;
-} 
 
-.search-form label{
-    font-size: 1.2rem;
-    padding-right: 1.5rem;
-    /* color:var(--black); */
-    cursor: pointer;
-    background-color: transparent;
+.search_form{
+    margin-left: 0;
+    margin-right: 0;
+    background: #f1f3f4;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    max-width: 540px;
+    position: relative;
+    transition: background 100ms ease-in,width 100ms ease-out;
 }
 
-.search-form label:hover{
-    color: var(--blue);
-} 
- 
+.container_search_field{
+    height: 46px;
+    padding: 0;
+    margin-left: 56px;
+    margin-right: 49px;
+    overflow: hidden;
+}
+
+.for_height{
+    padding: 0;
+    height: 46px;
+    line-height: 46px;
+    background: transparent;
+    border: none;
+    font: normal 'Product Sans', sans-serif;
+    font-variant-ligatures: none;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.unknown_reason{
+    height: 100%;
+}
+
+.height_another{
+    height: 100%;
+}
+.last_div{
+    height: 100%;
+    display: block;
+    line-height: 46px;
+    flex: 1;
+}
+
+.before_input{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex: 1;
+
+}
+
+.search_box{
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    padding: 0 16px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 1px;
+    outline: none;
+    height: 100%;
+    background-color: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    position: relative;
+    display: flex;
+    flex: 1;
+    letter-spacing: .01428571em;
+}
+
+.search_box::placeholder{
+    color:#5f6368a1;
+}
+
+.magnifying_glass_container{
+    padding: 0 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    line-height: 0;
+    float: left;
+    position: absolute;
+    top: 0;
+}
 
 
+.search_button{
+    padding: 8px;
+    margin: 3px;
+    color: #5f6368;
+    opacity: 1;
+    fill: currentColor;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.clear_container{
+    padding: 0 5px;
+    visibility: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 250ms ease-out;
+}
+
+.clear_button{
+    padding: 8px;
+    margin: 3px;
+    color: #5f6368;
+    opacity: 1;
+    fill: currentColor;
+}
+
+/* search container css ends here */
 /* header css ends here */
 
 
@@ -222,21 +302,16 @@ header{
 
 }
 
+
 .nav_list{
     height: 100%;
     width: 100%;
-    /* display: flex;
-    left: 0;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap; */
 }
 
 .sidebar_list-menu{
     margin: 0;
     height: 100%;
-    list-style: none;
+    list-style-type: disc;
     padding: 5px 0px;
 }
 
@@ -244,79 +319,28 @@ header{
     display: block;
     line-height: 38px;
     height: 46px;
-    padding: 0px 0px;
+    margin: 0;
     align-items: center;
     /* background-color: rgba(255, 255, 255, 0.555); */
 }
 
-/* .sidebar_list-items:active a{
-    background-color: red;
-} */
+.sidebar_link:active {
+    color: rgb(49, 117, 206);
+    background-color: rgba(155, 179, 245, 0.226);
+}
 
-/* .sidebar_button{
-    padding-left: 20px;
-    height: 100%;
-    width: 100%;
-    text-align: left;
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    overflow: hidden;
-} */
 
 
 
 .link{
     margin-left: 20px;
+    letter-spacing: .4px;
 }
 
-/* .sidebar_list-items :hover{
-    background-color: red;
-} */
-
-/* .sidebar #button{
-    position: absolute;
-    left: 90%;
-    top: 6px;
-    font-size: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    transform: translate(-50px);
-} */
-
-/* .sidebar ul li a{
-    color: #130f40;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0s ease;
-    border-radius: 12px;
-
-} */ 
-/* .sidebar ul li a:hover:not(.active){
-    color: #eee;
-    background-color:rgba(156, 159, 160, 0.534);
-    
-} */
+/* side bar css ends here */
 
 
-
-/* .sidebar ul li a :active{
-    color: #eee;
-    background: #6495ed;
-} */
-
-/* .sidebar ul li i{
-
-    border-radius: 12px;
-    l
-    text-align: center;
-}  */
+/* container css starts here */
 
  .container{
     justify-content: center;
@@ -337,12 +361,6 @@ header{
     align-items: center;
 }
 
-/* .container_items{
-    display: block;
-    padding: 0 48px ;
-    margin: 0 65px;
-    
-} */
 
 .main_container{
     max-width: 750px;
@@ -370,21 +388,6 @@ header{
     overflow-y: auto;
     
 }
-
-/* .section_info{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: calc(100% + 24px);
-    padding-bottom: 25px;
-} */
-
-/* .home_info {
-    padding: 10px;
-    align-items: center;
-    height: 100%;
-}
- */
 
 .scores{
     align-items: center;
@@ -619,9 +622,103 @@ td, th {
 
 /* css for the informations container in home tan ends here */
 
-
+/* css for the experiment tables start her */
 .exp_tables{
     height: 400px;
     width: 100%;
     /* background-color: black ; */
 }
+
+/* css for the experiment tables ends here */
+
+
+/* css for the analytics starts here */
+
+.container_items_charts{
+    max-width: 1120px;
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.for_margin_right{
+    max-width: 840px;
+
+}
+
+.analytics_header{
+    padding-top: 24px;
+    display: block;
+}
+#analytics_heading{
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 8px 0;
+    font-size: 1.75;
+}
+
+
+.section_for_analytics{
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    padding-top: 0px;
+    width: calc(100% + 24px);
+    padding-bottom: 20px;
+}
+
+
+@media (min-width:743px)
+
+ {
+     .chartBox {
+        width: 100%;
+        display: flex;
+        -webkit-box-align: vertical;
+        flex-direction: column;
+
+    }
+}
+
+@media (min-width:1024px) 
+
+{
+    .chartBox{
+        width: 50%;
+        display: flex;
+        -webkit-box-align: vertical;
+        flex-direction: column;
+        
+    }
+}
+
+
+.for_margin_border{
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* background-color: #fff; */
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 12px;
+
+}
+
+
+
+
+
+
+/* css for the analytics ends here */
+
+/* container css ends here */

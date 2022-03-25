@@ -2,84 +2,99 @@
 
 
 {% block container %}
-<div class="container_items charts">
-  <h1>Shapes of Your Marks</h1>
-  <div class="chartBox">
-    <canvas id="myChart" height="300px"></canvas>
-  </div>
-  <div class="chartBox">
-    <canvas id="myChart1" height="300px"></canvas>
-  </div>
 
-  <script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Physics', 'Maths', 'Biology', 'Chemistry', 'Hindi', 'English', 'Social Science'],
-        datasets: [{
-          label: 'Marks',
-          data: [89, 98, 77, 76, 76, 78, 84, 100],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-         
-        }
-      }
-    });
 
-    const ctx1 = document.getElementById('myChart1').getContext('2d');
-    const myChart1 = new Chart(ctx1, {
-      type: 'polarArea',
-      data: {
-        labels: ['Physics', 'Maths', 'Biology', 'Chemistry', 'Hindi', 'English', 'Social Science'],
-        datasets: [{
-          label: 'Marks',
-          data: [89, 98, 77, 76, 76, 78, 84, 100],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)'
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
+<div class="container_items_charts">
+  <div class="for_margin_right">
+    <div class="analytics_header">
+      <h1 id="analytics_heading">Shapes of Your Marks</h1>
+    </div>
+    <section class="section_for_analytics">
+
+
+      <div class="chartBox Box">
+        <div class="for_margin_border">
+          <canvas id="myChart" height="300px"></canvas>
+        </div>
+      </div>
+      <div class="chartBox Box">
+        <div class="for_margin_border">
+          <canvas id="myChart1" height="300px"></canvas>
+        </div>
+      </div>
+
+    </section>
+    <script>
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Physics', 'Maths', 'Biology', 'Chemistry', 'Hindi', 'English', 'Sanskrit'],
+          datasets: [{
+            label: 'Marks',
+            data: [89, 98, 77, 76, 76, 78, 84],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+
           }
         }
-      }
-    });
+      });
 
-  </script>
+      const ctx1 = document.getElementById('myChart1').getContext('2d');
+      const myChart1 = new Chart(ctx1, {
+        type: 'polarArea',
+        data: {
+          labels: ['Physics', 'Maths', 'Biology', 'Chemistry', 'Hindi', 'English', 'Social Science'],
+          datasets: [{
+            label: 'Marks',
+            data: [89, 98, 77, 76, 76, 78, 84],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
 
+    </script>
+
+  </div>
 </div>
+
 
 {% endblock %}

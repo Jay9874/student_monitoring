@@ -7,7 +7,7 @@ from django.core.files.storage import FileSystemStorage
 from matplotlib.style import context
 from pandas import read_sql_query
 from sklearn import model_selection
-from .models import Subject, Student, Score, Cocurriculum, Achievement, Remark
+from .models import Student, Score, Cocurriculum, Achievement, Remark
 
 
 
@@ -32,10 +32,12 @@ def student_home(request):
 def scores(request):
     student = Student.objects.get(student=request.user.id)
     score = Score.objects.filter(student=student)
+    # semester = Semester.objects.filter(score=score, student=student)
 
     context = {
         "student_list": student,
-        "scores": score
+        "scores": score,
+        # "semesters": semester 
     }
 
     if not request.user.is_authenticated:

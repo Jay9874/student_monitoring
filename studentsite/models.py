@@ -45,49 +45,72 @@ class Student(models.Model):
         return self.first_name
 
 
-class Semester(models.Model):
+# class Semester(models.Model):
     
-    SEMESTER = (
-        ('Semester 1', 'Semester 1'),
-        ('Semester 2', 'Semester 2'),
-        ('Semester 3', 'Semester 3'),
-        ('Semester 4', 'Semester 4'),
-        ('Semester 5', 'Semester 5'),
-        ('Semester 6', 'Semester 6'),
-        ('Semester 7', 'Semester 7'),
-        ('Semester 8', 'Semester 8')
-    )
+#     SEMESTER = (
+#         ('Semester 1', 'Semester 1'),
+#         ('Semester 2', 'Semester 2'),
+#         ('Semester 3', 'Semester 3'),
+#         ('Semester 4', 'Semester 4'),
+#         ('Semester 5', 'Semester 5'),
+#         ('Semester 6', 'Semester 6'),
+#         ('Semester 7', 'Semester 7'),
+#         ('Semester 8', 'Semester 8')
+#     )
 
 
-    student = models.ForeignKey(Student, on_delete=models.CASCADE, blank=True, null=True)
-    semester = models.CharField(max_length=64, blank=False, choices=SEMESTER )
+#     student = models.ManyToManyField(Student, blank=False)
+#     semester = models.CharField(max_length=64, blank=False, choices=SEMESTER )
     
 
-    def __str__(self):
-        return self.semester
+#     def __str__(self):
+#         return self.semester
 
         
-class Subject(models.Model):
+# class Subject(models.Model):
 
-    student = models.ForeignKey(Student, null=True, blank=False, on_delete=models.CASCADE)
-    semester = models.ForeignKey(Semester, default=1, on_delete=models.CASCADE, blank=False)
-    subject_name = models.CharField(max_length=255)
+#     student = models.ManyToManyField(Student, blank=False)
+#     semester = models.ManyToManyField(Semester, blank=False)
+#     subject_name = models.CharField(max_length=255)
+#     subject_exam_marks = models.FloatField(max_length=64, null=True, blank=True)
+#     subject_assingment_marks = models.FloatField(max_length=64, null=True, blank=True)
 
-    objects = models.Manager()
+#     objects = models.Manager()
 
-    def __str__(self):
-        return self.subject_name
+#     def __str__(self):
+#         return self.subject_name
 
 
 class Score(models.Model):
 
     # id = models.AutoField(primary_key=True)
     student = models.ForeignKey(Student, null=True, on_delete=models.CASCADE)
-    subject = models.ForeignKey(Subject, blank=False, on_delete=models.CASCADE, null=True)
-    semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
-    subject_exam_marks = models.FloatField(default=0)
-    subject_assignment_marks = models.FloatField(default=0)
-    physics = models.CharField(max_length=64, default=0, null=True, blank=False)
+    # subject = models.ForeignKey(Subject, blank=False, on_delete=models.CASCADE, null=True)
+    # semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
+    # subject_exam_marks = models.FloatField(default=0)
+    # subject_assignment_marks = models.FloatField(default=0)
+    physics_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    physics_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    mathematics_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    mathematics_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    chemistry_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    chemistry_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    biology_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    biology_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    computer_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    computer_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    hindi_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    hindi_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    english_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    english_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    history_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    history_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    geography_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    geography_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    sanskrit_exam_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+    sanskrit_assingment_marks = models.FloatField(max_length=64, default=0, null=True, blank=False)
+
+
 
     objects = models.Manager()
 
@@ -114,7 +137,7 @@ class Cocurriculum(models.Model):
     )
 
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
+    # semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
     sports = models.CharField( max_length=64, choices=SPORTS, blank=True)
     singing = models.CharField(max_length=10, choices=Grade, default="", blank=True)
     dancing = models.CharField(max_length=10, choices=Grade, default="", blank=True)
@@ -128,7 +151,7 @@ class Cocurriculum(models.Model):
 class Achievement(models.Model):
 
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
+    # semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
     academic_achievements = models.ImageField(upload_to='', default="", blank=False)
     additional_achievements = models.ImageField(upload_to='', default="", blank=False)
 
@@ -136,7 +159,7 @@ class Achievement(models.Model):
 class Remark(models.Model):
     teacher = models.ForeignKey(User, on_delete=models.CASCADE, default="")
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
+    # semester = models.ForeignKey(Semester, null=True, on_delete=models.CASCADE, blank=False)
     teacher_thought = models.CharField(max_length=800, default="", blank=False, null=True)
 
     objects = models.Manager()

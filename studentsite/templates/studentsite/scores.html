@@ -4,7 +4,7 @@
 
 
 {% block container %}
-
+{% for score in scores %}
 <div class="container_items scores">
     <h1>Marks, You Achieved</h1>
 
@@ -18,9 +18,9 @@
         </tr>
         <tr>
             <td>1</td>
-            <td>Phy</td>
+            <td>Physics</td>
             <td>
-                90/100
+                {{ score.physics_exam_marks }}/100
             </td>
             <td>98/100</td>
 
@@ -28,41 +28,41 @@
         <tr>
             <td>2</td>
             <td>Maths</td>
-            <td>98/100</td>
+            <td>{{ score.mathematics_exam_marks }}/100</td>
             <td>98/100</td>
         </tr>
         <tr>
             <td>3</td>
             <td>Biology</td>
-            <td>77/100</td>
+            <td>{{ score.biology_exam_marks }}/100</td>
             <td>98/100</td>
         </tr>
 
         <tr>
             <td>4</td>
             <td>Chemistry</td>
-            <td>76/100</td>
+            <td>{{ score.chemistry_exam_marks }}/100</td>
             <td>98/100</td>
         </tr>
 
         <tr>
             <td>5</td>
             <td>Hindi</td>
-            <td>76/100</td>
+            <td>{{ score.hindi_exam_marks }}/100</td>
             <td>98/100</td>
         </tr>
 
         <tr>
             <td>6</td>
             <td>English</td>
-            <td>78/100</td>
+            <td>{{ score.english_exam_marks }}/100</td>
             <td>98/100</td>
         </tr>
 
         <tr>
             <td>7</td>
-            <td>Social Science</td>
-            <td>84/100</td>
+            <td>Sanskrit</td>
+            <td>{{ score.sanskrit_exam_marks }}/100</td>
             <td>98/100</td>
         </tr>
     </table>
@@ -72,18 +72,38 @@
         <h3>Percentage: 82.57%</h3>
     </div>
 
-    {% for score in scores %}
+   
     <div class="exp_tables">
       
         <ul>
-            <li>{{ score.subject_exam_marks }}</li>
+            <li></li>
         </ul>
     
     </div>
-    {% endfor %}
+   
+
+
    
 
 </div>
+{% endfor %}
+
+
+
+<!-- <div class="semester_scores_toggler">
+    <div class="toggler_list">
+        <ul>
+            <li>Semester 1</li>
+            <li>Semester 2</li>
+            <li>Semester 3</li>
+            <li>Semester 4</li>
+            <li>Semester 5</li>
+            
+        </ul>
+    </div>
+
+</div> -->
+
 
 
 
