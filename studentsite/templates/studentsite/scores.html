@@ -5,85 +5,89 @@
 
 {% block container %}
 {% for score in scores %}
-<div class="container_items scores">
-    <h1>Marks, You Achieved</h1>
+<div class="container_for_all container_scores">
+    <div class="for_margin_right">
+        <div class="all_container_header scores_header">
+            <h1 class="main_container_heading scores_heading">Marks, You Achieved</h1>
+        </div>
 
+        <section class="section_for_scores">
+            <div class="container_for_margin">
+                <div class="container_for_remark_detail">
+                    <div class="for_remark_heading">
+                        <div class="remark_heading_padding">
+                            <div class="remark_heading_container">
+                                <div class="main_remark_heading">
+                                    <h2 class="remark_h2">Marksheet</h2>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>Subject Code</th>
+                                        <th>Subject Name</th>
+                                        <th>Marks obtained</th>
+                                        <th>Topper's Marks</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Physics</td>
+                                        <td>
+                                            {{ score.physics_exam_marks }}/100
+                                        </td>
+                                        <td>98/100</td>
 
-    <table>
-        <tr>
-            <th>Subject Code</th>
-            <th>Subject Name</th>
-            <th>Marks obtained</th>
-            <th>Topper's Marks</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Physics</td>
-            <td>
-                {{ score.physics_exam_marks }}/100
-            </td>
-            <td>98/100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Maths</td>
+                                        <td>{{ score.mathematics_exam_marks }}/100</td>
+                                        <td>98/100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Biology</td>
+                                        <td>{{ score.biology_exam_marks }}/100</td>
+                                        <td>98/100</td>
+                                    </tr>
 
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Maths</td>
-            <td>{{ score.mathematics_exam_marks }}/100</td>
-            <td>98/100</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Biology</td>
-            <td>{{ score.biology_exam_marks }}/100</td>
-            <td>98/100</td>
-        </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Chemistry</td>
+                                        <td>{{ score.chemistry_exam_marks }}/100</td>
+                                        <td>98/100</td>
+                                    </tr>
 
-        <tr>
-            <td>4</td>
-            <td>Chemistry</td>
-            <td>{{ score.chemistry_exam_marks }}/100</td>
-            <td>98/100</td>
-        </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Hindi</td>
+                                        <td>{{ score.hindi_exam_marks }}/100</td>
+                                        <td>98/100</td>
+                                    </tr>
 
-        <tr>
-            <td>5</td>
-            <td>Hindi</td>
-            <td>{{ score.hindi_exam_marks }}/100</td>
-            <td>98/100</td>
-        </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>English</td>
+                                        <td>{{ score.english_exam_marks }}/100</td>
+                                        <td>98/100</td>
+                                    </tr>
 
-        <tr>
-            <td>6</td>
-            <td>English</td>
-            <td>{{ score.english_exam_marks }}/100</td>
-            <td>98/100</td>
-        </tr>
-
-        <tr>
-            <td>7</td>
-            <td>Sanskrit</td>
-            <td>{{ score.sanskrit_exam_marks }}/100</td>
-            <td>98/100</td>
-        </tr>
-    </table>
-
-    <div class="overall">
-        <h3>Total: 578/600</h3>
-        <h3>Percentage: 82.57%</h3>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Sanskrit</td>
+                                        <td>{{ score.sanskrit_exam_marks }}/100</td>
+                                        <td>98/100</td>
+                                    </tr>
+                                </table>
+                                <div class="overall">
+                                    <h3>Total: 578/600</h3>
+                                    <h3>Percentage: 82.57%</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-   
-    <div class="exp_tables">
-      
-        <ul>
-            <li></li>
-        </ul>
-    
-    </div>
-   
-
-
-   
 
 </div>
 {% endfor %}

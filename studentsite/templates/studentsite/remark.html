@@ -1,31 +1,422 @@
 {% extends "studentsite/layout.html" %}
-
+{% load static %}
 
 
 
 
 {% block container %}
 
-<div class="container_items">
-    <h1>You, in Teacher's View</h1>
+<div class="container_for_all container_remark">
+    <div class="for_margin_right">
+        <div class="all_container_header remark_header">
+            <h1 class="main_container_heading remark_heading">A brief on You</h1>
+        </div>
+        <section class="section_for_remark">
+
+
+
+            <!-- html for based on performance section in remark tab starts here -->
+            <div class="deviding_section">
+                <div class="container_for_margin">
+                    <div class="container_for_remark_detail">
+                        <div class="for_remark_heading">
+                            <div class="remark_heading_padding">
+                                <div class="remark_heading_container">
+                                    <div class="main_remark_heading">
+                                        <h2 class="remark_h2">Based on your performance</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- html for scores remark starts here -->
+                        <div class="container_for_perRemark">
+                            <div class="for_divControll">
+                                <div class="for_main_remark_padding">
+                                    <div class="for_icon_and_remark">
+                                        <div class="for_remark_icon_margin">
+                                            <div class="div_for_remark_icon">
+                                                <i class="material-icons">table_chart</i>
+                                            </div>
+                                        </div>
+                                        <div class="for_remark_feedback">
+
+                                            <!-- for remark icon label -->
+                                            <div class="for_icon_label_feedback">
+                                                <div class="for_icon_label_margin">
+                                                    <div class="for_label_padding">
+                                                        <h3 class="remark_label_heading">Scores</h3>
+                                                    </div>
+                                                </div>
+
+
+                                                <!-- for feedback on scores achieved by student starts here -->
+                                                <div class="for_feedback_container">
+                                                    <div class="for_feedback_padding">
+                                                        <div class="main_feedback_container">
+                                                            You are very good in Maths and Physics. <br>
+                                                            You can perform better in Chemistry while keeping slight
+                                                            focus on Biology.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- for feedback on scores achieved by student ends here -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- html for scores remark ends here -->
+
+
+                        <!-- html for cocurriculum remarks starts here -->
+                        <div class="container_for_perRemark">
+                            <div class="underline_bar">
+                                <div class="straight_line"></div>
+                            </div>
+                            <div class="for_divControll">
+                                <div class="for_main_remark_padding">
+                                    <div class="for_icon_and_remark">
+                                        <div class="for_remark_icon_margin">
+                                            <div class="div_for_remark_icon">
+                                                <i class="material-icons">sports</i>
+                                            </div>
+                                        </div>
+                                        <div class="for_remark_feedback">
+
+                                            <!-- for icon label of the cocurriculum -->
+                                            <div class="for_icon_label_feedback">
+                                                <div class="for_icon_label_margin">
+                                                    <div class="for_label_padding">
+                                                        <h3 class="remark_label_heading">Co-curriculum</h3>
+                                                    </div>
+                                                </div>
+
+                                                <!-- html for feedback on cocurriculum -->
+                                                <div class="for_feedback_container">
+                                                    <div class="for_feedback_padding">
+                                                        <div class="main_feedback_container">
+                                                            You play cricket just like MS Dhoni. <br>
+                                                            You can have a better carrer in keeping such a great talent
+                                                            up. <br>
+                                                            Hope you seeing on firing bowlers soon.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- html for cocurriculum remark ends here -->
+
+            <!-- html for based on performance section in remark tab ends here -->
+
+
+
+
+
+
+            <!-- html for teacher's view section in remarks tab starts here -->
+            <div class="deviding_section">
+                <div class="container_for_margin">
+                    <div class="container_for_remark_detail">
+                        <div class="for_remark_heading">
+                            <div class="remark_heading_padding">
+                                <div class="remark_heading_container">
+                                    <div class="main_remark_heading">
+                                        <h2 class="remark_h2">Teacher's views</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teacher_view_container">
+                            <div>
+                                <div class="for_padding_teacherview">
+                                    <div class="for_jscontroller_teacherview">
+                                        <div class="for_main_devider_teacherview">
+                                            <div class="div_for_teacherview_padding">
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher1">
+                                                    <div class="for_padding_teacher1">
+
+
+
+
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- name field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- name field of teacher1 -->
+                                                        <div class="for_name_teacher1">
+                                                            <div class="for_main_name">
+                                                                Arpita Podder <br>
+                                                                Department of Computer Science
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher2">
+                                                    <div class="for_padding_teacher1">
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- image field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- name field of teacher1 -->
+
+                                                            <div class="for_name_teacher1">
+                                                                <div class="for_main_name">
+                                                                    Arpita Podder <br>
+                                                                    Department of Computer Science
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher2">
+                                                    <div class="for_padding_teacher1">
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- image field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- name field of teacher1 -->
+                                                        <div class="for_name_teacher1">
+                                                            <div class="for_main_name">
+                                                                Arpita Podder <br>
+                                                                Department of Computer Science
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher2">
+                                                    <div class="for_padding_teacher1">
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- name field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- name field of teacher1 -->
+                                                        <div class="for_name_teacher1">
+                                                            <div class="for_main_name">
+                                                                Arpita Podder <br>
+                                                                Department of Computer Science
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher2">
+                                                    <div class="for_padding_teacher1">
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- name field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- name field of teacher1 -->
+                                                        <div class="for_name_teacher1">
+                                                            <div class="for_main_name">
+                                                                Arpita Podder <br>
+                                                                Department of Computer Science
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher2">
+                                                    <div class="for_padding_teacher1">
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- name field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- name field of teacher1 -->
+                                                        <div class="for_name_teacher1">
+                                                            <div class="for_main_name">
+                                                                Arpita Podder <br>
+                                                                Department of Computer Science
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                                <!-- css for teacher1 in teacherview starts here -->
+                                                <div class="container_for_teacher2">
+                                                    <div class="for_padding_teacher1">
+
+                                                        <!-- quotes and about of teacher1 -->
+                                                        <div class="for_teacher1_name_department">
+
+                                                            <!-- quote field of teacher1 -->
+                                                            <div class="for_quote_teacher1">
+                                                                <div class="for_main_quote">
+                                                                    "Jay is a very good student."
+                                                                </div>
+                                                            </div>
+                                                            <!-- name field of teacher1 -->
+                                                            <div class="for_margin_teacher1_img">
+                                                                <div class="main_img_container">
+                                                                    <img src="{% static 'studentsite/arpita.jpeg' %}"
+                                                                        height="48px" width="48px"
+                                                                        style="border-radius: 75px;" alt="img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- name field of teacher1 -->
+                                                        <div class="for_name_teacher1">
+                                                            <div class="for_main_name">
+                                                                Arpita Podder <br>
+                                                                Department of Computer Science
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- css for teacher1 in teacherview ends here -->
+
+                                            </div>
+                                        </div>
+                                        <div class="for_span">
+                                            <span></span>
+                                        </div>
+                                        <div class="for_span">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- html for teacher's view secton in remarks tab ends here -->
+
+
+
+        </section>
+    </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 {% endblock %}

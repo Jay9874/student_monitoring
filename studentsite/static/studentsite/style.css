@@ -9,54 +9,30 @@ html{
     overflow-x: hidden;
 }
 
+div{
+    display: block;
+}
+
 *{
     font-family: 'Product Sans', sans-serif;
                                                 
     -webkit-tap-highlight-color: transparent;
     font-style: normal;
     font-weight: 400; 
-
     box-sizing: border-box;
     transition: all .2s linear;
 }
 
-a{
-    display: flex;
-    padding-left: 20px;
-    height: 100%;
-    width: 100%;
-    text-align: left;
-    align-items: center;
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    overflow: hidden;
-    text-decoration: none;
-    font-weight: bolder;
-    color: rgba(0, 0, 0, 0.678);
-}
-
-.sidebar_link:hover:not(.active){
-    background-color:rgba(174, 176, 177, 0.212);
-}
 
 
 
 th{
     font-size: larger;
 }
-h1, h2, h3, h4{
-    padding: 5px;
-    font-weight: bolder;
-}
-
 
 body{
+    -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
     max-width: 100%;
     min-height: 100vh;
@@ -65,7 +41,7 @@ body{
     letter-spacing: .01428571em;
     font-optical-sizing: none;
     text-size-adjust: 100%;
-    /* background-color:white; */
+    background-color:rgb(255, 255, 255);
 }
 
 
@@ -103,6 +79,7 @@ header{
 }
 
 .school_logo{
+    /* margin-right: 40vw; */
     padding-right: 30px;
     box-sizing: border-box;
     flex: 1 0 auto;
@@ -128,22 +105,28 @@ header{
 
 
 #school_logo{
-    height: 40px;
+    height: 35px;
 }
 #school_name h3{
     margin: 0;
+    padding-left: 8px;
 }
+
 
 
 /* search container css start here */
 
 .search_container{
-    justify-content: flex-start;
-    flex: 1 1 100%;
+    /* justify-content: flex-start; */
+    position: relative;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    margin-left: auto;
+    /* flex: 1 1 100%; */
     height: 48px;
     vertical-align: middle;
-    white-space: nowrap;
-    -webkit-box-align: center;
+    /* white-space: nowrap; */
+    /* -webkit-box-align: center; */
     align-items: center;
     display: flex;
 }
@@ -165,7 +148,7 @@ header{
     background: #f1f3f4;
     border: 1px solid transparent;
     border-radius: 8px;
-    max-width: 540px;
+    max-width: 360px;
     position: relative;
     transition: background 100ms ease-in,width 100ms ease-out;
 }
@@ -300,6 +283,29 @@ header{
     /* background-color: #D3D3D3; */
     padding: 5px 0;
 
+}
+
+.sidebar_link{
+    display: flex;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.678);
+}
+
+.sidebar_link:hover:not(.active){
+    background-color:rgba(174, 176, 177, 0.212);
 }
 
 
@@ -501,10 +507,6 @@ td, th {
     margin: 0;
     padding: 0;
     display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 
 .basic_info_name{
@@ -516,6 +518,13 @@ td, th {
     min-height: 10px;
     padding-left: 24px;
     transition: padding-left 15ms ease-in-out;
+
+}
+
+.user_greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -577,7 +586,7 @@ td, th {
 }
 
 .info_h3{
-    font-size: .6875;
+    font-size: .9rem;
     font-weight: 500;
     line-height: 1rem;
     text-transform: uppercase;
@@ -634,7 +643,7 @@ td, th {
 
 /* css for the analytics starts here */
 
-.container_items_charts{
+.container_for_all{
     max-width: 1120px;
     padding-left: 48px;
     padding-right: 48px;
@@ -648,15 +657,15 @@ td, th {
 
 }
 
-.analytics_header{
+.all_container_header{
     padding-top: 24px;
     display: block;
 }
-#analytics_heading{
+.main_container_heading{
     display: block;
     text-align: center;
     padding: 0;
-    margin: 0 0 8px 0;
+    margin: 0 0 16px 0;
     font-size: 1.75;
 }
 
@@ -715,10 +724,748 @@ td, th {
 }
 
 
-
-
-
-
 /* css for the analytics ends here */
+/* css for cocurriculum starts here */
 
+.section_for_cocurriculum{
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    padding-top: 0;
+    width: calc(100% + 24px);
+    padding-bottom: 20px;
+}
+
+.container_for_sport{
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+
+}
+
+
+.container_for_other{
+    width: 50%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+}
+
+/* @media (min-width:743)
+{
+    .container_for_other1{
+        width: 100%;
+        display: flex;
+        -webkit-box-orient: vertical;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1024)
+{
+    .container_for_other1{
+        width: 50%;
+        display: flex;
+        -webkit-box-orient: vertical;
+        flex-direction: column;
+    }
+} */
+
+
+
+
+/* @media (min-width:743)
+{
+    .container_for_other2{
+        width: 100%;
+        display: flex;
+        -webkit-box-orient: vertical;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1024)
+{
+    .container_for_other2{
+        width: 50%;
+        display: flex;
+        -webkit-box-orient: vertical;
+        flex-direction: column;
+    }
+} */
+
+.for_margin_all{
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.for_deviding_all{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container_for_upside_all{
+    min-height: 1px;
+
+}
+
+.for_upside_all{
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    height: auto;
+    outline-offset: -4px;
+    display: block;
+}
+
+.for_header{
+    display: flex;
+
+}
+.for_deviding_upside{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.heading_for_all{
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 8px 0;
+    padding: 0;
+}
+
+.for_sport_icons{
+    flex-grow: 1;
+    flex-shrink: 1;
+    letter-spacing: .01428571em;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #5f6368;
+    margin: 0;
+    padding: 8px 0 0 0;
+    display: flex;
+}
+
+.sport_icons_list{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.container_for_outcome_all{
+    margin-top: auto;
+    min-height: 1px;
+
+}
+
+.for_straight_line{
+    padding-left: 0;
+    transition: padding-left 15ms ease-in-out;
+}
+
+.for_straight_line div{
+    border-top: 1px solid #dadce0;
+}
+
+.for_outcome_all{
+    position: relative;
+    outline: none;
+    overflow: hidden;
+
+}
+.main_outcome{
+    padding-bottom: 18px;
+    padding-top: 17px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 100%;
+    outline-offset: -4px;
+    display: block;
+}
+
+.outcome_of_all{
+    letter-spacing: .01785714em;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #1a73e8;
+}
+/* css for cocurriculum ends here */
+/* css for remark start here */
+
+.section_for_remark{
+    -webkit-box-orient: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    padding-top: 0;
+    width: calc(100% + 24px);
+    padding-bottom: 20px;
+
+}
+
+.deviding_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+
+}
+
+
+
+
+.container_for_margin{
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #dadce0;
+    background-color: white;
+
+}
+.container_for_remark_detail{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    width: 100%;
+}
+
+.for_remark_heading{
+    min-height: 1px;
+}
+
+.remark_heading_padding{
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: auto;
+    padding-bottom: 8px;
+}
+
+.main_remark_heading{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.remark_h2{
+    font-family: 'Product Sans', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
+
+
+/* css for based on performance section starts here for remark tab */
+.container_for_perRemark{
+    min-height: 1px;
+
+}
+.for_divControll{
+    position: relative;
+    outline: none;
+    overflow: hidden;
+}
+
+.for_main_remark_padding{
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    height: 100%;
+    outline-offset: -4px;
+    color: #1a73e8;
+    text-decoration: none;
+    display: block;
+}
+
+.for_icon_and_remark{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.for_remark_icon_margin{
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 16px;
+}
+.div_for_remark_icon{
+    width: 48px;
+    height: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.for_remark_feedback{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+.for_icon_label_feedback{
+    -webkit-box-align: stretch;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -4px;
+}
+
+.for_icon_label_margin{
+    flex-basis: 160px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-right: 24px;
+}
+
+.for_label_padding{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding-top: 4px;
+}
+
+.remark_label_heading{
+    letter-spacing: .00625em;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.for_feedback_container{
+    flex-basis: 160px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.for_feedback_padding{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding-top: 4px;
+}
+
+.main_feedback_container{
+    letter-spacing: .01428571em;
+    font-family: 'Product Sans', sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #1a73e8;
+    width: 100%;
+}
+/* css for based on performance section ends here for remark tab */
+
+/* css for teacher's view section in ramark tab starts here */
+.teacher_view_container{
+   min-height: 1px; 
+}
+.for_padding_teacherview{
+    height: 100%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.for_jscontroller_teacherview{
+    overflow: hidden;
+    position: relative;
+}
+.for_main_devider_teacherview{
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+/* .for_main_devider_teacherview::-webkit-scrollbar{
+    display: none;
+} */
+
+.div_for_teacherview_padding{
+    display: flex;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+}
+.container_for_teacher1{
+    width: 156px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.for_padding_teacher1{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+}
+.for_margin_teacher1_img{
+    width: 48px;
+    height: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.main_img_container{
+    width: 48px;
+    height: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.for_teacher1_name_department{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.for_name_teacher1{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+}
+
+.for_main_name{
+    text-align: center;
+    letter-spacing: .00625em;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.for_quote_teacher1{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    padding-top: 4px;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+.for_main_quote{
+    text-align: center;
+    text-align: center;
+    letter-spacing: .00625em;
+    font-family: 'Product Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.container_for_teacher2{
+    width: 156px;
+    margin-left: 12px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.fot_span{
+    display: none;
+    left: 12px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: white;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+}
+
+.for_span span{
+    opacity: .55;
+    padding: 6px;
+    transition: opacity .3s ease-in-out;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    display: inline-block;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* css for teacher's view section in remark tab ends here */
+/* css for remark ends here */
+
+/* css for the achievement tab in the studentsite starts here */
+/* .for_zero_height{
+    height: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 985;
+} */
+/* .for_fixed_navigation{
+    position: fixed;
+} */
+
+.achievement_navigation_header{
+    background-color: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #dadce0;
+    transition: border .25s;
+    width: 100%;
+}
+
+.achievement_navigation_menu{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    overflow-x: auto;
+}
+
+.achievement_list_item{
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 48px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.link_for_certificates{
+    align-items: center;
+    display: flex;
+    position: relative;
+    color: #1a73e8;
+    text-decoration: none;
+    /* display: block; */
+}
+.for_header_figure{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    font-size: 24px;
+    font-weight: 400;
+    padding-right: 16px;
+
+}
+
+.main_figure{
+    width: 24px;
+    height: 24px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+a:-webkit-any-link{
+    cursor: pointer;
+}
+.for_achievment_label{
+    letter-spacing: .01785714em;
+    font-family: 'Product Sans', sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #5f6368;
+    margin: 0;
+    padding: 0 0 8px 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.underline_bar_achievement{
+    min-height: 10px;
+    padding-left: 88px;
+    transition: padding-left 15ms ease-in-out;
+}
+
+.straight_line_achievement{
+    border-top: 1px solid #dadce0;
+}
+.container_for_download_icon{
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 16px;
+    color: forestgreen;
+}
+.main_icon_download{
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    width: 24px;
+}
+
+.main_feedback_container_achievement{
+    letter-spacing: .01428571em;
+    font-family: 'Product Sans', sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    width: 100%;
+}
+.update_status{
+    color: #5f6368;
+}
+.save_button{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* css for the achievement tab in the studentsite starts here */
 /* container css ends here */
