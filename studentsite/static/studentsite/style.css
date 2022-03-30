@@ -23,7 +23,9 @@ div{
     transition: all .2s linear;
 }
 
-
+a:-webkit-any-link {
+    cursor: pointer;
+}
 
 
 th{
@@ -631,6 +633,45 @@ td, th {
 
 /* css for the informations container in home tan ends here */
 
+
+/* css for the score section starts here */
+
+.section_for_scores{
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    padding-top: 0;
+    width: calc(100% + 24px);
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* css for the score section ends here */
 /* css for the experiment tables start her */
 .exp_tables{
     height: 400px;
@@ -999,6 +1040,7 @@ td, th {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
+    padding-left: 10px;
 }
 
 .remark_h2{
@@ -1459,13 +1501,263 @@ a:-webkit-any-link{
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
 /* css for the achievement tab in the studentsite starts here */
+/* Css for the discover section in score and analytics section starts here */
+
+.container_for_discover{
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+}
+
+.container_for_discover_header{
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 32px;
+    position: relative;
+    padding: 32px 8px 0;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.container_discover_heading{
+    flex-grow: 1;
+    flex-shrink: 1;
+
+}
+
+.another_container_discover_heading{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.main_heading_of_discover{
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 2.25rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container_for_description{
+    margin: 0;
+    letter-spacing: .00625em;
+    font-family: 'Product Sans',sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #5f6368;
+    margin-top: 12px;
+
+}
+
+.container_for_svg{
+    display: block;
+    width: 360px;
+    height: 128px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.main_svg_discover{
+    height: 100%;
+    width: auto;
+    border: none;
+
+}
+
+/* css for the discover content starts her */
+.container_for_discover_content{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    width: 100%;
+}
+
+.for_discover_content_margin{
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 24px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: rgba(230, 225, 225, 0.212);
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.for_content_header_devider{
+    display: flex;
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.for_content_header_and_button{
+    min-height: 1px;
+    position: relative;
+    outline: none;
+    overflow: hidden;
+}
+
+.for_content_description_heading{
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: auto;
+    padding-bottom: 8px;
+}
+
+.button_for_content_link{
+   flex-grow: 0;
+   flex-shrink: 0;
+   margin-left: 16px;
+  
+}
+
+.figure_for_more:hover{
+    background-color: #afb2b42a;
+}
+.figure_for_more{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    border-radius: 100%;
+}
+
+.link_for_more{
+    color: #5f6368;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+
+.heading_header{
+   display: flex;
+   align-items: center;
+   -webkit-box-align: center;
+
+}
+.header_h3{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+
+
+
+.h3_of_content{
+    font-family: 'Product Sans', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #202124;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.for_content_description{
+    min-height: 1px;
+    position: relative;
+    outline: none;
+    overflow: hidden;
+}
+.container_for_more_description{
+    margin: 0;
+    letter-spacing: .00625em;
+    font-family: 'Product Sans',sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+    color: #5f6368;
+    margin-top: 0;
+}
+    
+
+
+.for_main_content_description{
+    padding-top: 8px;
+    padding-left: 24px;
+    padding-right: 50px;
+    height: auto;
+    padding-bottom: 8px;
+}
+.for_description_flex{
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* css for the discover content starts her */
+
+
+
+/* Css for the discover section in score and analytics section starts here */
+
+
+
 /* container css ends here */
