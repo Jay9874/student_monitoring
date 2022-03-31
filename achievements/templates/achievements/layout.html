@@ -1,0 +1,63 @@
+{% extends "studentsite/layout.html" %}
+
+
+
+
+{% block container %}
+<div class="container_for_all container_achievement">
+    <div class="for_margin_right">
+
+        <!-- <div class="for_fixed_navigation"> -->
+        <div class="all_container_header achievement_header">
+            <h1 class="main_container_heading achievement_heading">Milestones, You Own</h1>
+        </div>
+        <!-- <div class="for_zero_height"> -->
+        <nav class="achievement_navigation_header">
+            <ul class="achievement_navigation_menu">
+                <li class="achievement_list_item">
+                    <a class="link_for_certificates" href="{% url 'achievements:academics' %}">
+                        <div class="for_header_figure">
+                            <figure class="main_figure">
+                                <i class="material-icons">school</i>
+                            </figure>
+                        </div>
+
+                        <div class="for_achievement_label">Academics</div>
+
+                    </a>
+                </li>
+                <li class="achievement_list_item">
+                    <a class="link_for_certificates" href="{% url 'achievements:co_curriculum' %}">
+                        <div class="for_header_figure">
+                            <figure class="main_figure">
+                                <i class="material-icons">stadium</i>
+                            </figure>
+                        </div>
+                        <div class="for_achievement_label">Co-curriculum</div>
+
+                    </a>
+                </li>
+                <li class="achievement_list_item">
+                    <a class="link_for_certificates" href="{% url 'achievements:others' %}">
+                        <div class="for_header_figure">
+                            <figure class="main_figure">
+                                <i class="material-icons">bloodtype</i>
+                            </figure>
+                        </div>
+                        <div class="for_achievement_label">Others</div>
+
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+     {% block achievements %}
+     {% endblock  %}
+
+
+
+
+    </div>
+</div>
+{% endblock %}

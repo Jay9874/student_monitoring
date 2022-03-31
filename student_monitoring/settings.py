@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'loginsite', 
     'studentsite',
     'active_link',
+    'achievements'
 ]
 
 MIDDLEWARE = [

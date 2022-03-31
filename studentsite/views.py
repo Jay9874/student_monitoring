@@ -85,7 +85,7 @@ def achievement(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
 
-    return render(request, "studentsite/achievement.html", context)
+    return render(request, "achievements/academics.html", context)
 
 def remark(request):
     student = Student.objects.filter(student=request.user.id)
