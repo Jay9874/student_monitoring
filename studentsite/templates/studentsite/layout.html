@@ -1,6 +1,11 @@
 {% load static %}
 {% load active_link_tags %}
-
+{% url 'studentsite:student_home' as url %}
+{% url 'studentsite:scores' as url1%}
+{% url 'studentsite:analytics' as url2%}
+{% url 'studentsite:cocurriculum' as url3%}
+{% url 'achievements:academics' as url4%}
+{% url 'studentsite:remark' as url5%}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,37 +90,36 @@
     <div class="sidebar">
         <div class="nav_list">
             <ul class="sidebar_list-menu">
-                <li class="sidebar_list-items list_item-home {% active_link 'studentsite:student_home' 'active' %} ">
-                    <a class="sidebar_link" href="{% url 'studentsite:student_home' %}">
+                <li class="sidebar_list-items list_item-home">
+                    <a href="{{ url }}"{% if request.path == url %} class="active"{% endif %} class="sidebar_link" >
                         <i class="material-icons">account_circle</i>
                         <span class="link">Home</span>
                     </a>
                 </li>
                 <li
-                    class="sidebar_list-items list_item-scores {% active_link 'studentsite:scores' 'active' %} ">
-                    <a class="sidebar_link" href="{% url 'studentsite:scores' %}">
+                    class="sidebar_list-items list_item-scores">
+                    <a href="{{ url1 }}"{% if request.path == url1 %} class="active"{% endif %} class="sidebar_link">
                         <i class="material-icons">table_chart</i>
                         <!-- <i class='bx bx-book-open'></i> -->
                         <span class="link">Scores</span>
                     </a>
                 </li>
                 <li class="sidebar_list-items list_item-analytics">
-                    <a class="sidebar_link" href="{% url 'studentsite:analytics' %}">
+                    <a href="{{ url2 }}"{% if request.path == url2 %} class="active"{% endif %} class="sidebar_link">
                         <i class="material-icons">analytics</i>
                         <!-- <i class='bx bxs-bar-chart-alt-2'></i> -->
                         <span class="link">Analytics</span>
                     </a>
                 </li>
                 <li class="sidebar_list-items list_item-curriculum">
-                    <a class="sidebar_link" href="{% url 'studentsite:cocurriculum' %}">
+                    <a href="{{ url3 }}"{% if request.path == url3 %} class="active"{% endif %} class="sidebar_link">
                         <i class="material-icons">sports</i>
                         <!-- <i class='bx bx-run'></i> -->
                         <span class="link">Co-curriculum</span>
                     </a>
                 </li>
                 <li class="sidebar_list-items list_item-achievement">
-
-                    <a class="sidebar_link" href="{% url 'achievements:academics' %}">
+                    <a href="{{ url4 }}"{% if request.path == url4 %} class="active"{% endif %} class="sidebar_link">
                         <i class="material-icons">workspace_premium</i>
                         <!-- <i class='bx bx-medal'></i> -->
                         <span class="link">Achievements</span>
@@ -123,8 +127,7 @@
 
                 </li>
                 <li class="sidebar_list-items list_item-remarks">
-
-                    <a class="sidebar_link" href="{% url 'studentsite:remark' %}">
+                    <a href="{{ url5 }}"{% if request.path == url5 %} class="active"{% endif %} class="sidebar_link">
                         <i class="material-icons">gpp_good</i>
                         <!-- <i class='bx bx-notepad'></i> -->
                         <span class="link">Remarks</span>
@@ -132,7 +135,6 @@
 
                 </li>
                 <li class="sidebar_list-items list_item-setting">
-
                     <a class="sidebar_link" href="#">
                         <i class="material-icons">settings</i>
                         <!-- <i class='bx bxs-cog'></i> -->

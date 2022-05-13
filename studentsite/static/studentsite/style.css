@@ -323,7 +323,7 @@ header{
     color: rgba(0, 0, 0, 0.678);
 }
 
-.sidebar_link:hover:not(.active){
+.sidebar_link:hover{
     background-color:rgba(174, 176, 177, 0.212);
 }
 
@@ -349,7 +349,22 @@ header{
     /* background-color: rgba(255, 255, 255, 0.555); */
 }
 
-.sidebar_link:active {
+.active {
+    display: flex;
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: bolder;
     color: rgb(49, 117, 206);
     background-color: rgba(155, 179, 245, 0.226);
 }
@@ -663,30 +678,6 @@ td, th {
     width: calc(100% + 24px);
     padding-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* css for the score section ends here */
 /* css for the experiment tables start her */
